@@ -21,10 +21,10 @@ public class Service {
 
     public void run() {
         Long[] random = random();
-        int Mostafa = 0;
+        int record = 0;
         if (sum(random) > target) {
             for (;;) {
-                Mostafa++;
+                record++;
                 System.out.println();
                 Long[] offer = offer(random, changeValue);
                 if (sum(offer) < sum(random)) {
@@ -35,17 +35,16 @@ public class Service {
         }
         if (sum(random) < target) {
             for (;;) {
-                Mostafa++;
+                record++;
                 System.out.println();
                 Long[] offer = offer(random, changeValue);
-                System.out.println(" Offer 2: " + Arrays.toString(offer));
                 if (sum(offer) > sum(random)) {
                     random = offer;
                 }else
                     break;
             }
         }
-        System.out.println("Mostafa  :"+Mostafa);
+        System.out.println("record  :"+record);
         System.out.println(Arrays.toString(random));
     }
 

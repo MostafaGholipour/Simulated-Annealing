@@ -50,7 +50,7 @@ public class Service {
 
     @Synchronized
     public Long[] offer(Long[] input, Long change) {
-        List<Long[]> list = new ArrayList<Long[]>();
+        List<Long[]> list = new ArrayList<>();
         for (int i = 0; i < input.length; i++) {
             Long[] offer = new Long[input.length];
             System.arraycopy(input, 0, offer, 0, input.length);
@@ -95,8 +95,8 @@ public class Service {
 
     public Long sum(Long[] longs) {
         Long sum = 0L;
-        for (int i = 0; i < longs.length; i++) {
-            sum += longs[i];
+        for (Long aLong : longs) {
+            sum += aLong;
         }
         return sum;
     }
